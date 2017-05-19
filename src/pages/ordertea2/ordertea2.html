@@ -1,0 +1,43 @@
+
+<ion-header>
+
+  <ion-navbar color="greenstar">
+    <ion-title>Order</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bgcolor">
+  <h4 align="center" class="coffeetext-head">Macha Tea</h4>
+  <div style="width:200px;height:200px">
+      <img src="../../assets/image/machatea.png" class="pic" style="width:100%;height:100%;">
+    </div>
+  <ion-item class="detailsetting">
+  <ion-label >Quantity:</ion-label>
+    <ion-select [(ngModel)]="quantity" placeholder="0" >
+            <ion-option value="1" >1</ion-option>
+            <ion-option value="2" >2</ion-option>
+            <ion-option value="3" >3</ion-option>
+            <ion-option value="4" >4</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item class="detailsetting">
+    <ion-label >Size:</ion-label>
+    <ion-select [(ngModel)]="size" placeholder="Choose" >
+            <ion-option value="s" >S</ion-option>
+            <ion-option value="m" >M</ion-option>
+            <ion-option value="l" >L</ion-option>
+      </ion-select>
+  </ion-item>
+  <ion-item class="detailsetting">
+    <ion-label >Type:</ion-label>
+        <ion-select [(ngModel)]="type" placeholder="Choose" >
+            <ion-option value="hot" >Hot</ion-option>
+            <ion-option value="cool" >Cool</ion-option>
+            <ion-option value="frappe" >Frappe</ion-option>
+      </ion-select>
+  </ion-item>
+   <button ion-button class="submit-button" (click)="showConfirm()">Order</button>
+
+</ion-content>

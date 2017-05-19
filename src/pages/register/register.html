@@ -1,0 +1,46 @@
+
+<ion-header>
+
+  <ion-navbar color="greenstar">
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bgcolor">
+  <ion-list class="setting">
+    <ion-label fixed>Username:</ion-label>
+    <ion-item class="inputbg">
+      <ion-input  type="text" placeholder="Username"></ion-input>
+    </ion-item>
+    <ion-label fixed>Password:</ion-label>
+    <ion-item class="inputbg">
+      <ion-input  type="password" placeholder="Password"></ion-input>
+    </ion-item>
+    <ion-label fixed>Firstname:</ion-label>
+    <ion-item class="inputbg">
+      <ion-input  type="text" placeholder="Firstname"></ion-input>
+    </ion-item>
+    <ion-label fixed>Lastname:</ion-label>
+    <ion-item class="inputbg">
+      <ion-input  type="text" placeholder="Lastname"></ion-input>
+    </ion-item>
+    <ion-label fixed>Gender:</ion-label>
+    <ion-select class="inputbg" [(ngModel)]="gender" placeholder="Choose">
+      <ion-option value="male" >Male</ion-option>
+      <ion-option value="female" [selected]="true">Female</ion-option>
+    </ion-select>
+    <ion-label fixed>E-mail:</ion-label>
+    <ion-item class="inputbg">
+      <ion-input  type="text" placeholder="E-mail"></ion-input>
+    </ion-item>
+    <ion-label fixed>Birthday:</ion-label>
+    <ion-datetime class="inputbg" displayFormat="MM/DD/YYYY" [(ngModel)]="myDate" placeholder="Choose"></ion-datetime>
+    <ion-label fixed>Telephone No.:</ion-label>
+    <ion-item class="inputbg">
+      <ion-input  type="text" placeholder="Telephone number"></ion-input>
+    </ion-item>
+    <button ion-button class="submit-button" (click)="goToLoginPage()">Register</button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,28 @@
+page-profile {
+    .img-circle{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        margin-top: 25px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+    }
+    .submit-button{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: 20px;
+        background: #0b421a;
+    }
+    .submit-button:hover{
+        background: #116533;
+    }
+    .profile-setting{
+        background: none;
+        color: #eac784;
+    }
+}

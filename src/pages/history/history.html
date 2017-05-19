@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="greenstar">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Payment History</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="bgcolor">
+  <img src="../../assets/image/payment.png" style="height:auto;width:100%">
+  <h3 class="head">Oldest update</h3>
+  <ion-list>
+    <ion-item class="orderbutton"  *ngFor="let o of order | async">
+      <button class="orderbutton" (click)="itemTapped($event, o.$key)">
+        <h2 class="orderbutton">Order # {{ o.$key}}</h2>
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

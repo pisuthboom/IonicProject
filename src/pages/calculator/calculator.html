@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="greenstar">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>CaloriesCalculator</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="bgcolor">
+  <img src="../../assets/image/cal.png" style="height:150px;width:150px" class="logo">
+  <ion-item class="cal-setting">
+    <h1>Total Calories</h1>
+  </ion-item>
+  <ion-list >
+    <label ion-item *ngFor="let o of order | async" class="cal-setting">
+      <ion-icon [name]="icons" item-left></ion-icon>
+      {{ o.names }}x{{ o.quantity }} {{ o.calories }} calories
+    </label>
+  </ion-list>
+
+</ion-content>

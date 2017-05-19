@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar color="greenstar">
+    <ion-title>Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bgcolor">
+  
+    <h6 align="left" style="color:#eac784">Order #{{ id }} </h6>
+    <img src="../../assets/image/order.png" class="pic" style="width:75%;height:50%;">
+      <ion-item class="detailsetting">
+        <ion-label fixed >Order:</ion-label>  
+        <ion-label fixed >{{ (orderdetail | async)?.names }}</ion-label>
+      </ion-item>
+      <ion-item class="detailsetting">
+        <ion-label fixed >Status:</ion-label>  
+        <ion-label fixed >Complete</ion-label>
+      </ion-item>
+      <ion-item class="detailsetting">
+        <ion-label fixed >Total Price:</ion-label>  
+        <ion-label fixed >{{ (orderdetail | async)?.price }} baht</ion-label>
+      </ion-item>
+</ion-content>

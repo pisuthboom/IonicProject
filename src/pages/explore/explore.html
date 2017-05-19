@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="greenstar">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <p primary>Home</p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bgcolor">
+  <ion-searchbar class="searchbar" (ionInput)="getItems($event)"></ion-searchbar>
+  <!--Promotion slide?-->
+  <ion-slides class="promotion" pager style="height:80%;width:97%">
+    <ion-slide>
+      <img src="../../assets/image/promotion1.png">
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/image/promotion2.png">
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/image/promotion3.png">
+    </ion-slide>
+  </ion-slides>
+  
+  <ion-list  class="catagories">
+    <button class="catagoriesbutton"  ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <ion-icon [name]="item.icon" item-left></ion-icon>
+      {{item.title}}
+    </button>
+  </ion-list>
+</ion-content>

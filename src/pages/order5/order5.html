@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar color="greenstar">
+    <ion-title>Order</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bgcolor">
+  <h4 align="center" class="coffeetext-head">Choose your preference</h4>
+  <button clear class="coffeebutton" (click)="goToOrderStraw()">
+    <div style="width:200px;height:200px">
+      <img src="../../assets/image/strawberry.png" class="pic" style="width:100%;height:100%;">
+    </div>
+    <p class="coffeetext">Strawberry Frappe</p>
+  </button>
+  <button clear class="coffeebutton" (click)="goToOrderMango()">
+    <div style="width:200px;height:200px;">
+      <img src="../../assets/image/mango.png" class="pic" style="width:100%;height:100%">
+    </div>
+    <p class="coffeetext">Mango Frappe</p>
+  </button>
+
+</ion-content>
